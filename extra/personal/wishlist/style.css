@@ -1,0 +1,23 @@
+.wishlist{
+	height:500px;
+	overflow-y:auto;
+}
+
+.wishlist-car-model{
+	text-transform:uppercase;
+	display:inline-block;
+}
+
+
+
+.list-item{
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+}
+
+.no-cars-modal{
+	position:fixed;
+	top:100px;
+	left:500px;
+	z-index:1050;
+}

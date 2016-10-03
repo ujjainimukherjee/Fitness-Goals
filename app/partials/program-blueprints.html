@@ -1,0 +1,20 @@
+ <div class="container" ng-controller='programMainCtrl'>
+    <h4>Healthcare program apps</h4>
+    
+    <!-- End of program grid -->
+    <div class="program-grid" ng-repeat="rows in chunkedData  | orderBy:'display_order'">
+  <div class="span4" ng-repeat="item in rows | orderBy:'display_order'">     
+    
+      <a href="#/detail/{{item.guid}}">
+      	<img ng-src="{{item.icon_url}}">
+      </a>       
+      <p class='program-title'>{{item.title}}</p>
+
+      
+</div>
+</div>
+     
+   
+    
+  
+  </div>

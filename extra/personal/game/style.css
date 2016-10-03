@@ -1,0 +1,46 @@
+.row{
+    margin-bottom:5px;
+}
+
+.bs-example::after {
+    color: #959595;    
+    font-size: 12px;
+    font-weight: 700;
+    left: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+.bs-example {
+    background-color: #fff;
+    border-color: #ddd;
+    border-radius: 4px 4px 0 0;
+    border-width: 1px;
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.color-swatches {
+    margin: 0 -5px;
+    overflow: hidden;
+}
+
+.color-swatches .green {
+    background-color: #5cb85c;
+}
+.color-swatch {
+    height: 100px;
+    width: 100px;
+}
+.color-swatch {
+    border-radius: 3px;
+    float: left;
+    height: 60px;
+    margin: 0 5px;
+    width: 60px;
+}

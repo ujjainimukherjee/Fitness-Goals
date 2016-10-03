@@ -1,0 +1,19 @@
+<div class='container detail-container' ng-controller='programDetailCtrl' >    
+	<div class='back-btn-wrapper'>
+		<button type="button" class='btn back-btn' ng-click="goBack()" >
+			<span aria-hidden="true" class="glyphicon glyphicon-triangle-left"></span>
+		</button>
+	</div>
+	<p class='img-wrapper'><img ng-src="{{iconUrl}}"></p>
+	<p class='detail-title'>{{title}}</p>
+	<p class='detail-text'>{{description}}</p>
+	<p class='detail-text' ng-if='incentiveDesc'>{{incentiveDesc}}</p>
+	<p class='detail-text' ng-if='incentiveVal'>Total  incentive value is {{incentiveVal}}</p>		
+	<table ng-if='multipleGoals' class='table table-striped table-bordered' >
+		<tr><th>Goal</th><th>Incentive Value</th></tr>
+		<tr ng-repeat='item in goalItems'>
+			<td>{{item.title}}</td>
+			<td>{{item.incentive_value}}</td>
+		</tr>
+	</table>
+</div>

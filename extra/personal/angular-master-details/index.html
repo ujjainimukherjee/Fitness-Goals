@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+
+<html>
+
+
+  <head>
+
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+    <link data-require="bootstrap@*" data-semver="3.0.0" rel="stylesheet" href="bootstrap.min.css" />
+
+    <script data-require="bootstrap@*" data-semver="3.0.0" src="bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+
+
+  <body ng-app="medsApp" >
+
+    <!-- Main view goes here -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-3" ng-controller="MainCntl">
+
+          <div class="list-group">
+
+            <a href="#/detail/{{med.id}}" class="list-group-item" ng-repeat="med in meds">
+
+              {{med.name}}
+
+            </a>
+
+          </div>
+
+
+        </div>
+
+        <div class="col-sm-9">
+
+          Detail
+
+      <div ng-view></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+        
+
+    <!-- Scripts at end of page for faster page load -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-route.min.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-sanitize.min.js"></script>
+
+    <script type="text/javascript">
+
+      //this is here to make plunkr work with AngularJS routing
+
+      angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+
+    </script>
+
+    <script src="App.js"></script>
+
+  </body>
+
+
+</html>
+
+

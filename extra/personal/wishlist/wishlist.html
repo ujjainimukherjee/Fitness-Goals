@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='carApp'>
+	<head>
+		<title>WishList with angular</title>
+		<link href='css/bootstrap.min.css' type='text/css' rel='stylesheet' />
+		<link href='css/bootstrap-theme.css' type='text/css' rel='stylesheet' />
+		<link href='style.css' type='text/css' rel='stylesheet' />
+		<script src='jquery.js' type='text/javascript'></script>
+		<script src='angular.js' type='text/javascript'></script>		
+		<script type='text/javascript' src='ui-bootstrap-tpls-0.13.4.js'></script>
+		<script type='text/javascript' src='js/bootstrap.min.js'></script>		
+		<script type='text/javascript' src='wishlist.js'></script>
+		<script src='cars.js'></script>
+	</head>
+
+	<body ng-controller='carController'>
+	  <div class="container"><!-- Start of container -->
+	  	<div class='page-header'>
+	  		<h1>Wishlist for Cars </h1>
+	  	</div><!-- End of page header -->
+	  	<div class='row'><!-- Start of row -->
+	  		<div class='col-md-4'>
+	  			<!-- Drop down list for cars -->
+	  			<select id='carList-ddl' class="form-control" ng-change='selectCar()' ng-model="selectDefault" 
+	  					ng-options="p as p.model group by p.make for p in cars | orderBy:['make','model']">	  				
+	  			</select>	  		 	
+	  		<!-- End of drop down list -->
+	  		</div>
+	  		<div class='col-md-2'>
+	  			<button type="button" class="btn btn-primary" ng-click="addCar()">Add Car</button>
+	  		</div>
+	  		<!-- List for selected cars -->
+	  		<div class='col-md-6 wishlist'>
+	  			<div class='well list-item' ng-repeat='c in newcars'>
+	  				<h5>
+	  				  <strong class='wishlist-car-model'>{{c.model}}</strong>
+	  				  <span class='pull-right'>
+						
+						 <button ng-click="deleteItem($index)" class="btn btn-xs btn-warning">
+                           <span class="glyphicon glyphicon-trash"></span>
+	  				</h5>
+	  				<h6>
+                      <span class='wishlist-car-make'>{{c.make}}</span>
+                      </h6>
+
+	  			</div>
+	  			
+	  		</div>
+	  		<!-- End of list for selected cars -->
+	  	</div><!-- End of row -->
+	  	<!-- Start of modal -->
+	  	 <div  class='no-cars-modal' ng-show='showModal'>
+	  	 	<div class="modal-dialog modal-sm">
+	  	 		<div class="modal-content">
+	  	 			<div class="modal-header">
+	  	 				<button type="button" class="close" ng-click="close()" data-dismiss="modal">&times;</button>
+	  	 				<h4 class="modal-title">You cannot add more cars</h4>
+	  	 			</div>
+	  	 			<div class="modal-body">
+	  	 				<p>You have selected all available cars. Please DELETE cars in wishlist to start adding them back again</p>
+	  	 			</div>
+	  	 			<div class="modal-footer">
+	  	 				<button type="button" class="btn btn-default" ng-click="close()" data-dismiss="modal">Close</button>
+	  	 			</div>
+	  	 		</div>
+	  	 	</div>
+	  	 	</div>
+	  	 </div>
+	  	 <!-- End of modal -->
+
+
+
+
+</div>
+
+	  </div><!--End of container -->
+		
+
+
+	</body>
+</html>
