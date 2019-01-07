@@ -1,5 +1,5 @@
 # Fitness-Goals
-Sample application created with the help of angularjs to keep track of all fitness goals 
+Sample application created with the help of angularjs 1.4 to keep track of all fitness goals 
 
 I created the following application for a company. The requirements are as follows:
 
@@ -7,7 +7,7 @@ I created the following application for a company. The requirements are as follo
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
-### TECH
+### TECHNOLOGIES USED
 - Construct a boilerplate angular app with two views and two controllers: the dashboard view/controller and the details view/controller.
 
 
